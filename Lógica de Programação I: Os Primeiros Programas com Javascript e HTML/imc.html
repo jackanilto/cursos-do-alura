@@ -15,8 +15,11 @@
         return imc;
     }
 
-    var imcMagno = calcularIMC(93, 1.81);
-    var imcAmigo = calcularIMC(74, 1.92);
+    var nome = prompt("Digite o seu nome: ");
+    var alturaInformada = prompt("Informe a sua altura: ");
+    var pesoInformado = prompt("Informe o seu peso: ");
 
-    mostra(imcMagno);
+    var imc = calcularIMC(pesoInformado, alturaInformada);
+
+    document.write("O IMC de " + nome + " é de: " + imc);
 </script>
