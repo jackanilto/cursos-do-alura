@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function ano() {
+        document.write(Math.round((anoAtual - anoInicio) / mediaIdade));
+        pulaLinha()
+    }
+
+    function mostra(texto) {
+        document.write(texto);
+    }
+
+    var anoAtual = 2017;
+    var anoInicio = 1500;
+    var mediaIdade = 28;
+
+    mostra("O número de gerações que passaram é de: ");
+    ano();
+</script>
