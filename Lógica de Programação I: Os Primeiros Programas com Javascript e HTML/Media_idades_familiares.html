@@ -4,4 +4,19 @@
         document.write(texto);
         document.write("<br>");
     }
+
+    var qtdFamiliares = parseInt(prompt("Quantidade de familiares? "));
+
+    var contador = 0;
+    var totalIdades = 0;
+
+    while (contador < qtdFamiliares) {
+        var idadeFamiliar = parseInt(prompt("Informe a idade do Familiar: "));
+        totalIdades += idadeFamiliar;
+        contador++;
+    }
+
+    var media = totalIdades / contador;
+    mostra("A média de idades dos familiares é de: " + media);
+    mostra("Fim!");
 </script>
