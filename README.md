@@ -5,6 +5,7 @@
 ## Programação
 ### Curso de Lógica de Programação
 - Lógica de Programação I: Os Primeiros Programas com Javascript e HTML.
+- Lógica de programação II: Pratique com Desenhos, Animações e um Jogo.
 
 ### Curso de Linguagem C
 - C I - Introdução à Linguagem das Linguagens.
