@@ -14,14 +14,16 @@ var tdImc = document.querySelector(".info-imc");
 var pesoEhValido = true;
 var alturaEhValida = true;
 
-if (peso < 0 || peso > 1000) {
+if (peso <= 0 || peso >= 1000) {
     pesoEhValido = false;
     console.log("Peso Inválido");
+    tdImc.textContent = "Peso Inválido";
 }
 
-if (altura < 0 || altura > 3.00) {
+if (altura <= 0 || altura >= 3.00) {
     alturaEhValida = false;
     console.log("Altura Inválida");
+    tdImc.textContent = "Altura Inválido";
 }
 
 if (pesoEhValido && alturaEhValida) {
