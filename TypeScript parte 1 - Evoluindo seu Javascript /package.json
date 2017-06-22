@@ -1,16 +1,18 @@
 {
-    "name": "y",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "compile": "tsc",
-        "start": "tsc -w"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "typescript": "^2.3.2"
-    }
+  "name": "alurabank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^2.0.42",
+    "@types/underscore": "^1.8.1",
+    "typescript": "^2.3.2"
+  }
 }
