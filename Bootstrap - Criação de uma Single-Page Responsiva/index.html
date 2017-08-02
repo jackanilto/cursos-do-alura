@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>TopCasaFina Arquitetura</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -10,7 +10,42 @@
 </head>
 
 <body>
-    <section class="container">
+
+    <header>
+        <nav class="navbar navbar-default" id="menu">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand">TopCasaFina Arquitetura</a>
+                </div>
+
+                <div id="collapse-navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#sobre-nos">Sobre Nós</a></li>
+                        <li><a href="#nossos-projetos">Nossos Projetos</a></li>
+                        <li><a href="#depoimento-clientes">Depoimentos de Clientes</a></li>
+                        <li><a href="#video-institucional">Videos Institucional</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="topcasafina-banner">
+            <h1>TopCasaFina Arquitetura</h1>
+            <p>Projetando a casa dos sonhos desde 2000 A.C</p>
+            <button class="btn btn-primary btn-lg">Contate-nos Agora</button>
+        </div>
+    </header>
+
+
+    <!-- Sobre nós e panels -->
+    <section id="sobre-nos" class="container">
         <h2>Sobre Nós</h2>
         <img class="img-responsive" src="img/empresa.jpg" alt="Foto de Duas Pessoas Olhando o Computador">
 
@@ -50,7 +85,7 @@
         </div>
     </section>
 
-
+    <!-- jumbotron -->
     <section class="jumbotron">
         <div class="container">
             <h3>Mais de 300 prêmios em design e em conforto.</h3>
@@ -58,8 +93,8 @@
         </div>
     </section>
 
-    <!-- Depoimento dos clientes -->
-    <section class="container">
+    <!-- Nossos Projetos -->
+    <section id="nossos-projetos" class="container">
         <h2>Nossos Projetos</h2>
         <figure class="thumbnail">
             <img class="img-responsive" src="img/projetos/casa-castelo.png" alt="Foto da Casa Castelo">
@@ -102,8 +137,8 @@
         </figure>
     </section>
 
-    <!-- Slide fotos -->
-    <section>
+    <!-- Depoimento de clientes e Slide fotos -->
+    <section id="depoimento-clientes">
         <h2 class="container" id="titulo-depoimentos">Depoimentos de Clientes</h2>
 
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -152,10 +187,73 @@
         </div>
     </section>
 
+    <!-- Video -->
+    <section id="video-institucional" class="container">
+        <h2>Vídeo Institucional</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_F-DmLUAT3A" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
 
+    <!-- Contato -->
+    <section id="contato" class="container">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco</p>
+        <form>
+            <div class="form-group">
+                <label for="contato-nome">Nome:</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                    <input class="form-control" id="contato-nome" type="text" placeholder="Seu Nome">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contato-email">Email:</label>
+                <div class="input-group">
+                    <div class="input-group-addon">@</div>
+                    <input type="email" class="form-control" id="contato-email" placeholder="Seu E-mail">
+                </div>
+            </div>
+        </form>
+        <div class="grupo-radio">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="tipo-pessoa" checked> Pessoa Física
+                </label>
+            </div>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="tipo-pessoa"> Pessoa Jurídica
+                </label>
+            </div>
+        </div>
+
+        <select class="contato-select form-control">
+            <option disabled selected>Tipo de Situação</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Mansão</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </section>
+
+    <footer>
+        <address>
+            <strong>TopCasaFina Arquitetura</strong><br>
+            Rua Vergueiro, 3185, Vila Mariana<br>
+            São Paulo, SP <br>
+        </address>
+        <address>
+            Tel: (11) 5571-2751 ou (11) 5083-3884 <br>
+            E-mail: contato.topcasafina@alura.com.br
+        </address>
+    </footer>
 
     <script src="jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="navbar-animation-fixed.js"></script>
 </body>
 
 </html>
