@@ -38,7 +38,7 @@ header h1 {
     padding-bottom: 25px;
     color: #FFF;
     margin-bottom: 0;
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
 }
 
@@ -73,8 +73,8 @@ footer address:last-child {
 @media(min-width: 992px) {
     .topCasaFina-banner {
         left: 0;
-        transform: translate(0, -80%);
-        width: 50%;
+        transform: translate(10%, -50%);
+        o width: 50%;
     }
     .topCasaFina-bannerWrapper {
         position: relative;
