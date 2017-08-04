@@ -1,10 +1,12 @@
 var tempoIniciante = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
+var frase = $(".frase").text();
 
-$(document).ready(function() {
+$(function() {
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaJogo();
+    inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
 });
 
@@ -36,10 +38,32 @@ function inicializaJogo() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             if (tempoRestante < 1) {
-                campo.attr("disabled", true);
                 clearInterval(cronometro);
+                finalizaJogo();
             }
         }, 1000);
+    });
+}
+
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.addClass("campo-desativado");
+    inserePlacar();
+}
+
+function inicializaMarcadores() {
+    campo.on("input", function() {
+        var digitado = campo.val();
+        var comparado = frase.substr(0, digitado.length);
+        if (digitado == comparado) {
+            campo.addClass("frase-certa");
+            campo.removeClass("frase-errada");
+        } else {
+            campo.addClass("frase-errada")
+            campo.removeClass("frase-certa");
+        }
+
+
     });
 }
 
@@ -50,4 +74,7 @@ function reiniciaJogo() {
     $("#contador-palavras").text("0");
     $("#tempo-digitacao").text(tempoIniciante);
     inicializaJogo();
+    campo.removeClass("campo-desativado");
+    campo.removeClass("frase-certa");
+    campo.removeClass("frase-errada");
 }
