@@ -1,0 +1,3 @@
+\b - Word boundary.
+^ - Înicio do alvo.
+$ - Fim do alvo.

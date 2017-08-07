@@ -1,0 +1,4 @@
+[A-Z][a-zç] {3,8} - Mês.
+[1-3]?\d - Dia.
+\d{3} - 3 Dígitos.
+\s+ - Um ou mais espaços.

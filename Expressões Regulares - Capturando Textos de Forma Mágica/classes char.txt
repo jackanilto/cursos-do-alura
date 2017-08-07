@@ -1,0 +1,6 @@
+[A-Z] - Letras de A até Z.
+[123] - 1,2 ou 3.
+
+\d - Todos os digitos [0-9].
+\s - Whitespace [\t\r\n\f].
+\w - wordchar [A-Za-z0-9_].

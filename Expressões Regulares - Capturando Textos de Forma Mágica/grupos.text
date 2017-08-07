@@ -1,0 +1,3 @@
+(\w+) - Grupo de word chars.
+(\w+)? - Grupo de word chars opcional.
+(?:w+) - Non-Capturing group
