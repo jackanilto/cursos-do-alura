@@ -29,3 +29,11 @@ td,
 th {
     text-align: center;
 }
+
+.placar {
+    display: none;
+}
+
+body {
+    overflow: scroll;
+}

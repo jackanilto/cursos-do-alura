@@ -1,4 +1,4 @@
-var tempoIniciante = $("#tempo-digitacao").text();
+var tempoInicial = $("#tempo-digitacaoa").text();
 var campo = $(".campo-digitacao");
 var frase = $(".frase").text();
 
@@ -9,6 +9,12 @@ $(function() {
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
 });
+
+function atualizaTempoInicial(novoTempo) {
+    var tempo = $("#tempo-digitacao");
+    tempoInicial = novoTempo;
+    tempo.text(novoTempo);
+}
 
 function atualizaTamanhoFrase() {
     var frase = $(".frase").text();
@@ -32,8 +38,8 @@ function inicializaContadores() {
 }
 
 function inicializaJogo() {
-    var tempoRestante = $("#tempo-digitacao").text();
     campo.one("focus", function() {
+        var tempoRestante = $("#tempo-digitacao").text();
         var cronometro = setInterval(function() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
@@ -53,6 +59,7 @@ function finalizaJogo() {
 
 function inicializaMarcadores() {
     campo.on("input", function() {
+        var frase = $(".frase").text();
         var digitado = campo.val();
         var comparado = frase.substr(0, digitado.length);
         if (digitado == comparado) {
@@ -72,7 +79,7 @@ function reiniciaJogo() {
     campo.val("");
     $("#contador-caracteres").text("0");
     $("#contador-palavras").text("0");
-    $("#tempo-digitacao").text(tempoIniciante);
+    $("#tempo-digitacao").text(tempoInicial);
     inicializaJogo();
     campo.removeClass("campo-desativado");
     campo.removeClass("frase-certa");
